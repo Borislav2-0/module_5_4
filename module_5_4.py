@@ -1,4 +1,4 @@
-from random import choice
+from random import choice, randrange
 
 
 class Building:
@@ -10,7 +10,8 @@ class Building:
     for i in range(total):
         i += 1
         material = choice(["солома (мазанка)", "дерево", "кирпич красный", "кирпич силикатный", "камень"])
-        print(f'Строение № {i}, материал - {material}')
+        num_of_floors = randrange(1, 5)
+        print(f'Строение № {i}, материал - {material}, количество этажей - {num_of_floors}')
 
 
 building = Building(' ')
